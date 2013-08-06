@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="script/js/jquery.js"></script>
+	<script src="script/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="script/js/scriptModel.js"></script>
+	<link rel="stylesheet" href="jquery-ui-1.10.3/themes/base/jquery.ui.all.css" />
+	<link rel="stylesheet" href="jquery-ui-1.10.3/demos/demos.css" />
+	<title>Редактор слайдшоу</title>
+</head>
+<body>
+
+<div id="dialog-modal"></div>
+
+	<div id="main">
+		<div id="box">
+			<div id="toolBox">
+				<div id="toolSlideshow" class="darkBlock" align="center">
+					<h4>Меню</h4>
+					<button id="bLoadSlideshow">Load</button>
+					<button id="bSaveSlideshow">Save</button>
+				</div>
+				<div id="toolSlide" class="darkBlock" align="center"> 
+					<h4>Слайд</h4>
+					<img id="bAddSlide" src="images/plus.png" effect=""/>
+					<img id="bRemoveSlide" src="images/remove.png" effect=""/>
+				</div>
+				<div id="toolEffect" class="darkBlock" align="center">
+					<h4>Эффекты</h4>
+					<img src="images/eBlackAndWhite.png" effect="blackAndWhite"/>
+					<img src="images/eSepia.png" effect="sepia"/>
+					<img src="images/eVignette.png" effect="vignette"/>
+					<img src="images/remove.png" effect=""/>
+				</div>
+				<div id="toolAnimation" class="darkBlock" class="darkBlock" align="center">
+					<h4>Анимация перехода</h4>
+					<select id="animation">
+						<option value="blind">blind</option>
+						<option value="bounce">bounce</option>
+						<option value="clip">clip</option>
+						<option value="drop">drop</option>
+						<option value="explode">explode</option>
+						<option value="fade">fade</option>
+						<option value="fold">fold</option>
+						<option value="highlight">highlight</option>
+						<option value="puff">puff</option>
+						<option value="pulsate">pulsate</option>
+						<option value="shake">shake</option>
+						<option value="slide">slide</option>
+					</select>
+				</div>
+				<div id="toolDelay" class="darkBlock" align="center">
+					<h4>Время показа</h4>
+					<select id="delay">
+						<option value="1000">1c.</option>
+						<option value="2000">2c.</option>
+						<option value="3000">3c.</option>
+						<option value="4000">4c.</option>
+						<option value="5000">5c.</option>
+					</select>
+				</div>				
+			</div>
+			<div id="imageBox" class="darkBlock" align="center">
+				<button id="loadImage" class="bNavigate">Загрузить картинки</button>
+				<div id="pictures">
+				</div>
+			</div>
+			<div id="centerBox" class="darkBlock" align="center">
+				<button id="bPrevious" class="bNavigate"><</button>
+				<button id="bNext" class="bNavigate">></button>
+				<div id="mainSlide">
+					<div></div>
+					<img/>
+				</div>
+			</div>
+		</div>
+		<div id="slideshowPanel" class="darkBlock">
+			<div id="action" align="center">
+				<img id="bRunSlideshow" src="images/play.png"/>
+				<img id="bStopSlideshow" src="images/stop.png"/>
+			</div>
+			<div id="slideshow">
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">$('document').ready(function(){$('#mymodal').modal();});</script>
+</html>

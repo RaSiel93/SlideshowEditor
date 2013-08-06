@@ -1,0 +1,196 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Ubuntu;
+}
+body{
+    overflow-y: hidden;
+}
+body>img{
+	width: 160px; 
+}
+html{
+	background-position: center;
+	background-size: cover;
+	background-image: url('../images/background.jpg');
+	background-color: #777;
+}
+#dialog button{
+    display: none;
+}
+/*--------------------------------------------------*/
+#main{
+	margin: 5px auto;
+}
+
+#box{
+	height: 540px;
+}
+.darkBlock{
+	background-color: rgba(30, 30, 30, 0.4);
+	border: 1px solid #222;
+}
+/*--------------------------------------------------*/
+#toolBox{
+	margin: 0 4px;
+	width: 90px;
+	float: left;
+}
+#toolBox #toolSlideshow button, #toolBox #toolSlide img{
+	width: 35px;
+	height: 31px;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+#toolBox div{
+	margin: 0 0 3px 0;
+	padding: 0 0 3px 0;
+}
+#toolBox h4{
+	margin: 3px 0 5px 0;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background-color: #222;
+}
+#toolBox button, select{
+	text-align: center;
+	width: 80px;
+	font-size: 12px;
+}
+#toolBox #toolEffect img{
+	width: 80px;
+	height: 60px;
+}
+/*--------------------------------------------------*/
+#centerBox{
+	height: 100%;
+	margin: 0 170px 0px 98px;
+}
+.bNavigate{
+	height: 100%;
+	width: 40px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border: none;
+	color: #fff;
+	transition: all 0.2s;
+}
+.bNavigate:hover{
+	background-color: rgba(20, 20, 20, 0.5);
+}
+#bPrevious{
+	float: left;
+}
+#bNext{
+	float: right;
+}
+
+#mainSlide{
+	height: 95%;
+    width: 90%;
+	margin: 15px auto;
+	position: relative;
+}
+
+#mainSlide img{
+	height: 100%;
+	max-width: 940px;
+    position: absolute;
+    left: 0;
+}
+#mainSlide div{
+	z-index: 40;
+	position: absolute;
+	/*height: 100%*/
+    left: 0;
+}
+/*--------------------------------------------------*/
+#imageBox{	
+	width: 160px;
+	height: 100%;
+	margin: 0 4px;
+	float: right;
+	z-index: 2000;
+}
+#pictures{
+	height: 94%;
+	overflow: auto;	
+}
+button#loadImage{
+	height: 30px;
+	width: 100%;
+}
+
+#imageBox img{
+	width: 140px;
+	position: relative;
+}
+/*--------------------------------------------------*/
+#slideshowPanel{
+	height: 120px;
+	margin: 5px 3px;
+	clear: both;
+	white-space: nowrap;
+}
+
+#action{
+	float: left;
+	width: 50px;
+	margin: 0 10px 0 0;
+}
+#action img{
+	float: left;
+	width: 50px;
+	margin: 5px;
+}
+
+#slideshow{
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+#slideshow>div{
+	padding: 10px 20px;
+	margin: 5px;
+	display: inline-block;
+	background-color: rgba(20, 20, 20, 0.4);	
+	transition: all 0.3s;
+	line-height: 0;
+}
+#slideshow>div:hover{
+	background-color: rgba(20, 20, 20, 0.7);
+}
+
+#slide>div{
+	position: relative; 
+}
+#slide>div>div{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#slide img{
+	position: relative;
+	height: 80px;
+}
+#slideshowPanel #slideshow .selectedSlide{
+	background-color: rgba(200, 200, 200, 0.8);
+}
+
+/*--------------------------------------------------*/
+#mainSlide > div[effect="vignette"]{
+    box-shadow: inset 0px 0px 150px rgba(0,0,0,1); 
+}
+div[effect="vignette"]{
+    box-shadow: inset 0px 0px 15px rgba(0,0,0,1); 
+}
+div[effect="blackAndWhite"] + img{
+  filter: url('../filter/filters.svg#blackAndWhite');
+}
+div[effect="sepia"] + img{
+  filter: url('../filter/filters.svg#sepia');
+}
